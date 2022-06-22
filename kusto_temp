@@ -1,0 +1,17 @@
+https://dataexplorer.azure.com/clusters/ghdwprod.eastus/databases/hydro
+
+github_copilot_v1_copilot_signup_subscription_created
+| where timestamp > datetime('2022-06-21')
+| extend tech_preview = tostring(copilot_user_details.is_technical_preview_user)
+| summarize make_set(copilot_subscription_plan), any(tech_preview) by user_id=tostring(user.id)
+| summarize count() by tostring(set_copilot_subscription_plan), any_tech_preview
+
+
+
+https://dataexplorer.azure.com/clusters/copilotkusto.westus2/databases/copilot-telemetry
+let startDate = ago(10min);
+AppEvents
+| where TimeGenerated > startDate
+| where Name startswith "copilot/" // Uncomment to get all editors
+| where Name contains "/ghostText" or Name contains "/request"  // Uncomment to get all events, not only completion events
+| summarize take_any(*) by Name
