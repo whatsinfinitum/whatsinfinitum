@@ -2,7 +2,7 @@
 - 👀 I’m interested in commercialization of technology and specially AI.
 - 🌱 I’m currently learning Unreal Engine
 - 💞️ I’m looking to collaborate on metaverse related projects.
-- 📫 How to reach me whatsinfinitum@gmail.com
+- 📫 How to reach me whatsinfinitum@github.com or alireza.goudarzi@gmail.com
 
 <!---
 whatsinfinitum/whatsinfinitum is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
